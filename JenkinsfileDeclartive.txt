@@ -30,3 +30,4 @@ stages{
 			step([$class: 'JUnitResultArchiver', testResults: '**/target/checkstyle-result.xml])
 		}
 }
+}
