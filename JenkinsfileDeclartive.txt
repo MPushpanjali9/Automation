@@ -27,7 +27,7 @@ stages{
   post{
 		always{
 			echo 'pipeline finshed'
-			step([$class: 'JUnitResultArchiver', testResults: '**/target/checkstyle-result.xml])
+			step([$class: 'JUnitResultArchiver', testResults: '**/target/checkstyle-result.xml'])
 		}
 }
 }
