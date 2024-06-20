@@ -2,32 +2,32 @@ pipeline{
 agent any
 stages{
 	stage('checkout'){
-	steps{
-		echo 'Checking out !!'
-		git 'https://github.com/MPushpanjali9/Automation.git'
+		steps{
+				echo 'Checking out !!'
+				git 'https://github.com/MPushpanjali9/Automation.git'
+			}
 		}
-	}
-	stage('build'){
-	steps{
-		echo 'Building out !!'
-		script{
-			env.PATH = 'C:/Users/pushpanjali_g/Maven/apache-maven-3.9.6/bin;C:\\Windows\\System32'
+		stage('build'){
+		steps{
+				echo 'Building out !!'
+				script{
+					env.PATH = 'C:/Users/pushpanjali_g/Maven/apache-maven-3.9.8/bin;C:\\Windows\\System32'
+				}
+			bat lablel: '', script: 'mvn package'
 		}
-		bat label: '', script: 'mvn package'
-	}
-	}
-	
-	stage('archiving'){
-	steps{
-		echo 'archiving out!!'
-		archiveArtifacts 'target/*.xml'
 		}
-	}
+		
+		stage('archiving'){
+		steps{
+				echo 'archiving out!!'
+				archiveArtifacts 'target/*.xml'
+			}
+		}
   }
   post{
 		always{
-			echo 'pipeline finshed'
-			step([$class: 'JUnitResultArchiver', testResults: '**/target/checkstyle-result.xml'])
+				echo 'pipeline finshed'
+				step([$class: 'JUnitResultArchiver', testResults: '**/target/*.xml'])
 		}
 }
 }
