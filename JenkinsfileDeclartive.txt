@@ -13,7 +13,7 @@ stages{
 				script{
 					env.PATH = 'C:/Users/pushpanjali_g/Maven/apache-maven-3.9.8/bin;C:\\Windows\\System32'
 				}
-			bat lablel: '', script: 'mvn package'
+			bat label: '', script: 'mvn package'
 		}
 		}
 		
