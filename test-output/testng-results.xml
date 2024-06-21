@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-06-21T09:25:28 IST" name="Suite" finished-at="2024-06-21T09:26:00 IST" duration-ms="32395">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestNGCucumberRunner1@59d2400d]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestNGCucumberRunner2@1d470d0]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test started-at="2024-06-21T09:25:28 IST" name="Cucumber Tests - Batch 1" finished-at="2024-06-21T09:25:47 IST" duration-ms="19596">
+      <class name="runners.TestNGCucumberRunner1">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runners.TestNGCucumberRunner1@59d2400d]" started-at="2024-06-21T09:25:28 IST" name="setUpClass" finished-at="2024-06-21T09:25:28 IST" duration-ms="531" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@4212a0c8]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestNGCucumberRunner1@59d2400d]" started-at="2024-06-21T09:25:28 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-06-21T09:25:47 IST" duration-ms="18974" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["User Sign-In and Sign-Out with Excel data"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Sign In and Sign Out Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runners.TestNGCucumberRunner1@59d2400d]" started-at="2024-06-21T09:25:47 IST" name="tearDownClass" finished-at="2024-06-21T09:25:47 IST" duration-ms="36" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- runners.TestNGCucumberRunner1 -->
+    </test> <!-- Cucumber Tests - Batch 1 -->
+    <test started-at="2024-06-21T09:25:47 IST" name="Cucumber Tests - Batch 2" finished-at="2024-06-21T09:26:00 IST" duration-ms="12742">
+      <class name="runners.TestNGCucumberRunner2">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runners.TestNGCucumberRunner2@1d470d0]" started-at="2024-06-21T09:25:47 IST" name="setUpClass" finished-at="2024-06-21T09:25:48 IST" duration-ms="21" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@1e7aa82b]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestNGCucumberRunner2@1d470d0]" started-at="2024-06-21T09:25:48 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-06-21T09:26:00 IST" duration-ms="12681" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["User Sign-In and Sign-Out with Excel data"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Sign In and Sign Out Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at org.testng.Assert.assertTrue(Assert.java:67)
+at steps.SignInOut.the_user_should_see_the_login_page(SignInOut.java:82)
+at steps.SignInOut.the_user_enters_credentials_from_the_excel_file(SignInOut.java:50)
+at ✽.the user enters credentials from the excel file(file:///C:/Users/pushpanjali_g/eclipse-workspace/Test_Automation_Project/src/test/resources/features/batch2/SignInOutScenario2.feature:5)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runners.TestNGCucumberRunner2@1d470d0]" started-at="2024-06-21T09:26:00 IST" name="tearDownClass" finished-at="2024-06-21T09:26:00 IST" duration-ms="23" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- runners.TestNGCucumberRunner2 -->
+    </test> <!-- Cucumber Tests - Batch 2 -->
+  </suite> <!-- Suite -->
+</testng-results>
