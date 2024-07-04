@@ -1,0 +1,12 @@
+package com.example;
+
+import static org.testng.Assert.assertEquals;
+
+import org.testng.annotations.Test;
+
+public class AppTest {
+	@Test
+	public void testAdd() {
+		assertEquals(5, App.add(2, 3));
+	}
+}
